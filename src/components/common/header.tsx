@@ -1,12 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-import { Menu, ShoppingCart, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { NAV_LINKS, AUTH_LINKS, SITE_NAME } from '@/lib/constants';
-import type { NavLink } from '@/lib/constants';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useCart } from '@/contexts/cart-context';
+import type { NavLink } from '@/lib/constants';
+import { AUTH_LINKS, NAV_LINKS, SITE_NAME } from '@/lib/constants';
+import { Menu, ShoppingCart, X } from 'lucide-react';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
@@ -30,6 +30,7 @@ const Header = () => {
   );
 
   return (
+    // <div className="relative h-64 bg-cover bg-center" style={{ backgroundImage: 'url(/woodFinish.jpg)' }}>
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-headline font-bold text-accent hover:text-accent/90 transition-colors">
