@@ -53,7 +53,7 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}' # Automatically provided by GitHub for commenting on PRs
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YOUR_PROJECT_ID }}' # Your Firebase service account secret
-          projectId: 'your-firebase-project-id' # Replace with your actual Firebase Project ID
+          projectId: 'profit-462922' # Replace with your actual Firebase Project ID
           channelId: 'live' # Deploys to the default live hosting channel
           # target: 'your-hosting-target' # Uncomment and replace if you have multiple hosting sites and need to target a specific one
           # entryPoint: './' # The directory containing your firebase.json, relative to repo root. Defaults to '.'
