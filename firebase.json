@@ -7,8 +7,8 @@
   },
   "functions": [
     {
-      "source": "functions",
-      "codebase": "default",
+      "source": "functions-next",
+      "codebase": "functions-next",
       "ignore": [
         "node_modules",
         ".git",
@@ -17,13 +17,12 @@
         "*.local"
       ],
       "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint",
         "npm --prefix \"$RESOURCE_DIR\" run build"
       ]
     }
   ],
   "hosting": {
-    "public": "out",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -49,6 +48,19 @@
     "ui": {
       "enabled": true
     },
-    "singleProjectMode": true
-  }
+    "singleProjectMode": true,
+    "storage": {
+      "port": 9199
+    }
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "rewrites": [
+    {
+      "source": "**",
+      "function": "nextApp",
+      "codebase": "functions-next"
+    }
+  ]
 }
